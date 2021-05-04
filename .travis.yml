@@ -6,19 +6,17 @@ script:
   - workbox generateSW workbox-config.js
 deploy:
   - provider: s3
-    skip_cleanup: true
     access_key_id: $ACCESS_KEY_ID
     secret_access_key: $SECRET_ACCESS_KEY
-    bucket: luamoris-staging
+    bucket: "luamoris-staging"
     region: us-east-2
     acl: public_read
     on:
       branch: develop
   - provider: s3
-    skip_cleanup: true
     access_key_id: $ACCESS_KEY_ID
     secret_access_key: $SECRET_ACCESS_KEY
-    bucket: luamoris-production
+    bucket: "luamoris-production"
     region: us-east-2
     acl: public_read
     on:
