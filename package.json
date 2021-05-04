@@ -1,0 +1,23 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "description": "My very own personal website. Basically this is just a résumé.",
+  "main": "sw.js",
+  "scripts": {
+    "lint": "stylelint assets/*/**.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luamoris/homepage.git"
+  },
+  "keywords": [],
+  "author": "Iosif Isachko <luamoris> (https://github.com/luamoris)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luamoris/homepage/issues"
+  },
+  "homepage": "https://github.com/luamoris/homepage#readme",
+  "devDependencies": {
+    "stylelint-config-standard": "22.0.0"
+  }
+}
