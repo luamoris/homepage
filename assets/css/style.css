@@ -1,0 +1,286 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ COLOR */
+
+:root {
+	--page-text: rgba(106, 84, 63, 0.8);
+	--page-text-topic: rgba(106, 84, 63, 1);
+	--page-bg: rgb(98, 77, 56);
+	--page-shadow: rgba(255, 255, 255, 0.3);
+
+	/* select */
+	--select: rgba(0, 0, 0, 0.1);
+
+	/* contacts */
+	--contact-point: rgba(106, 84, 63, 0.5);
+	--contact-point-hover: rgba(106, 84, 63, 1);
+
+	/* helpful */
+	--helpful-bg: rgba(106, 84, 63, 0.05);
+	--helpful-bg-hover: rgba(106, 84, 63, 0.15);
+	--helpful-bg-link: rgba(106, 84, 63, 0.6);
+	--helpful-bg-link-hover: rgba(106, 84, 63, 1);
+
+	/* helpful youtube */
+	--helpful-youtube-bg: rgba(255, 99, 71, 0.1);
+	--helpful-youtube-bg-hover: rgba(255, 99, 71, 0.15);
+	--helpful-youtube-link: rgba(255, 99, 71, 0.5);
+	--helpful-youtube-link-hover: rgba(255, 99, 71, 0.7);
+
+	/* sub-topic */
+	--sub-topic-border: rgba(142, 126, 126, 0.3);
+	--sub-topic-color: rgba(142, 126, 126, 0.7);
+
+	/* tags-label */
+	--tags-label-color: rgba(106, 84, 63, 0.5);
+	--tags-label-color-hover: rgb(199, 159, 79);
+	--tags-label-bg: rgba(106, 84, 63, 0.1);
+	--tags-label-bg-hover: rgba(246, 217, 161, 0.3);
+
+	--tags-label-lng-color: rgb(199, 159, 79);
+	--tags-label-lng-bg: rgba(246, 217, 161, 0.3);
+	--tags-label-lng-bg-hover: rgba(246, 217, 161, 0.4);
+
+	/* timeline */
+	--timeline-year-border: rgba(0, 0, 0, 0.1);
+
+	/* about */
+	--about-name-border: rgba(231, 187, 101, 1);
+	--about-name-color: rgba(106, 84, 63, 1);
+	--about-job-bg: rgba(246, 217, 161, 0.5);
+	--about-job-color: rgba(231, 187, 101, 1);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGE */
+
+* {
+	color: var(--page-text);
+}
+
+main {
+	background-color: var(--page-bg);
+}
+
+h2, h3 {
+	color: var(--page-text-topic);
+}
+
+::selection {
+	background-color: var(--select);
+}
+
+.page_custom:hover {
+	box-shadow: 0 10px 100px 0 var(--page-shadow);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CONTACTS */
+
+.contacts {
+	margin-top: 10px;
+}
+
+.contact-point span {
+	color: var(--contact-point);
+	transition: color 200ms ease;
+}
+
+.contact-point svg path {
+	fill: var(--contact-point);
+	transition: fill 200ms ease;
+}
+
+.contact-point:hover span {
+	color: var(--contact-point-hover);
+}
+
+.contact-point:hover svg path {
+	fill: var(--contact-point-hover);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ HELPFUL */
+
+.helpful {
+	padding: 10px;
+	border-radius: 2px;
+	background-color: var(--helpful-bg);
+	transition: background-color 150ms ease-out;
+}
+
+.helpful:hover {
+	background-color: var(--helpful-bg-hover);
+}
+
+.helpful a {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	color: var(--helpful-bg-link);
+	transition: color 150ms ease-out;
+}
+
+.helpful:hover a {
+	color: var(--helpful-bg-link-hover);
+}
+
+.helpful a::before {
+	content: '';
+	margin-right: 5px;
+	flex: 0 0 16px;
+	display: block;
+	height: 21px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ HELPFUL YOUTUBE */
+
+.helpful_youtube {
+	background-color: var(--helpful-youtube-bg);
+}
+
+.helpful_youtube:hover {
+	background-color: var(--helpful-youtube-bg-hover);
+}
+
+.helpful.helpful_youtube a::before {
+	background: url("../img/youtube.svg") 0 2px / contain no-repeat;
+}
+
+.helpful_youtube a {
+	color: var(--helpful-youtube-link);
+}
+
+.helpful_youtube:hover a {
+	color: var(--helpful-youtube-link-hover);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ HELPFUL REP */
+
+.helpful.helpful_rep a::before {
+	background: url("../img/rep.svg") 0 2px / contain no-repeat;
+}
+
+.helpful_rep a {
+	text-transform: capitalize;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SUB-TOPIC */
+
+.sub-topic {
+	margin-bottom: 8px;
+	border-bottom: 2px solid var(--sub-topic-border);
+}
+
+.sub-topic:not(:first-child) {
+	margin-top: 20px;
+}
+
+.sub-topic small {
+	font-weight: bold;
+	color: var(--sub-topic-color);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TAG LABEL */
+
+.tags_custom {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.tag-label {
+	margin: 2px 2px;
+	height: fit-content;
+	padding: 3px 8px;
+	border-radius: 2px;
+	color: var(--tags-label-color);
+	background-color: var(--tags-label-bg);
+	cursor: pointer;
+	transition: all 100ms;
+}
+
+.tag-label:hover {
+	color: var(--tags-label-color-hover);
+	background-color: var(--tags-label-bg-hover);
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TAG LABEL LANGUAGE */
+
+.tag-label_lng {
+	padding: 3px 10px;
+	border-radius: 50px;
+	background-color: var(--tags-label-lng-bg);
+}
+
+.tag-label_lng:hover {
+	background-color: var(--tags-label-lng-bg-hover);
+}
+
+.tag-label_lng span {
+	color: var(--tags-label-lng-color);
+
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TIMELINE YEAR */
+
+.timeline__year {
+	border-bottom: 2px solid var(--timeline-year-border);
+}
+
+.timeline__list {
+	margin-top: 8px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ABOUT */
+
+.about {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.about .name {
+	display: inline-block;
+	border-bottom: 4px solid var(--about-name-border);
+	font-size: 26px;
+	color: var(--about-name-color);
+}
+
+.about .job {
+	display: inline-block;
+	margin: 0 10px;
+	padding: 3px 10px;
+	border-radius: 50px;
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: 700;
+	color: var(--about-job-color);
+	background-color: var(--about-job-bg);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ MEDIA */
+
+@media (max-width: 1200px) {
+	.about {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.about .job {
+		margin: 10px 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.about {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.contacts {
+		width: fit-content;
+		margin: 0 auto;
+	}
+
+	.contacts li {
+		text-align: start;
+	}
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END */
