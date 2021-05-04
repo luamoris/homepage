@@ -34,10 +34,9 @@
 	--tags-label-color-hover: rgb(199, 159, 79);
 	--tags-label-bg: rgba(106, 84, 63, 0.1);
 	--tags-label-bg-hover: rgba(246, 217, 161, 0.3);
-
+	--tags-label-lng-bg-hover: rgba(246, 217, 161, 0.4);
 	--tags-label-lng-color: rgb(199, 159, 79);
 	--tags-label-lng-bg: rgba(246, 217, 161, 0.3);
-	--tags-label-lng-bg-hover: rgba(246, 217, 161, 0.4);
 
 	/* timeline */
 	--timeline-year-border: rgba(0, 0, 0, 0.1);
@@ -59,7 +58,8 @@ main {
 	background-color: var(--page-bg);
 }
 
-h2, h3 {
+h2,
+h3 {
 	color: var(--page-text-topic);
 }
 
@@ -104,6 +104,10 @@ h2, h3 {
 	transition: background-color 150ms ease-out;
 }
 
+.helpful_youtube a {
+	color: var(--helpful-youtube-link);
+}
+
 .helpful:hover {
 	background-color: var(--helpful-bg-hover);
 }
@@ -114,6 +118,10 @@ h2, h3 {
 	align-items: flex-start;
 	color: var(--helpful-bg-link);
 	transition: color 150ms ease-out;
+}
+
+.helpful_rep a {
+	text-transform: capitalize;
 }
 
 .helpful:hover a {
@@ -142,10 +150,6 @@ h2, h3 {
 	background: url("../img/youtube.svg") 0 2px / contain no-repeat;
 }
 
-.helpful_youtube a {
-	color: var(--helpful-youtube-link);
-}
-
 .helpful_youtube:hover a {
 	color: var(--helpful-youtube-link-hover);
 }
@@ -154,10 +158,6 @@ h2, h3 {
 
 .helpful.helpful_rep a::before {
 	background: url("../img/rep.svg") 0 2px / contain no-repeat;
-}
-
-.helpful_rep a {
-	text-transform: capitalize;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SUB-TOPIC */
@@ -199,7 +199,6 @@ h2, h3 {
 	background-color: var(--tags-label-bg-hover);
 }
 
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TAG LABEL LANGUAGE */
 
 .tag-label_lng {
@@ -208,13 +207,12 @@ h2, h3 {
 	background-color: var(--tags-label-lng-bg);
 }
 
-.tag-label_lng:hover {
-	background-color: var(--tags-label-lng-bg-hover);
-}
-
 .tag-label_lng span {
 	color: var(--tags-label-lng-color);
+}
 
+.tag-label_lng:hover {
+	background-color: var(--tags-label-lng-bg-hover);
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TIMELINE YEAR */
