@@ -1,3 +1,7 @@
 # Folders
 .DS_Store
 node_modules
+
+# Files
+sw.js.map
+workbox-c4c*.js*
