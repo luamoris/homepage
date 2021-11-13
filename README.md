@@ -4,10 +4,10 @@ My very own personal website. Basically this is just a résumé.
 ### Links
 
 > + [Source Code][sourse-code]
-> + Live Site [`iosig.fun`][iosig.fun]
+> + Live Site [`website`][website]
 
 [sourse-code]: https://github.com/luamoris/homepage
-[iosig.fun]: https://iosif.fun/
+[website]: https://luamoris.github.io/homepage/
 
 
 ### Run Сode
